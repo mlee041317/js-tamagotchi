@@ -1,3 +1,15 @@
 body {
-    background-color: pink;
+    background-image: url("https://artinsights.com/wp-content/uploads/2017/12/LiloandStitchbackgroundWatercolor-7.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
 }
+
+h1 {
+    color: burlywood;
+    font-family: 'Original Surfer', cursive;
+    text-align: center;
+}
+
