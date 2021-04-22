@@ -7,9 +7,37 @@ body {
     background-color: #464646;
 }
 
-h1 {
+main {
+    background-color: white;
     color: burlywood;
     font-family: 'Original Surfer', cursive;
     text-align: center;
+    border: solid 5px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 600px;
+    height: 400px;
+
 }
+
+.healthmeter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    
+}
+
+.lilo-main {
+    padding: auto;
+}
+
+.main-selection {
+    margin-top: 10px;
+}
+
+.lunch-selection {
+    margin-top: 10px;
+}
+
 
