@@ -7,9 +7,13 @@ body {
     background-color: #464646;
 }
 
+/* .pixelegg {
+    transform: translate(20px, 10px);
+} */
+
 main {
     background-image: url("https://cdn1.vectorstock.com/i/1000x1000/19/25/pixel-art-game-background-with-blue-sky-and-clouds-vector-27801925.jpg");
-    color: burlywood;
+    color: palevioletred;
     font-family: 'Original Surfer', cursive;
     text-align: center;
     border: solid 5px;

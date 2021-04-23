@@ -66,7 +66,10 @@ const timer = setInterval(function () {
 function death() {
     $('main').addClass('hidden')
     $('#deathScreen').removeClass('hidden')
-    $('#death-message').text('insert message')
+    $('#death-message').text('Oh no! Your lilogotchi died!')
+    const audio = new Audio('./imgs/nice-ocean-waves.mp3')
+    audio.play();
+
 }
 
 //playScreen
@@ -74,9 +77,10 @@ function death() {
 $('.feed-pudge').on('click', function () {
     $('#lilo-swimming').attr("src", "https://i.ibb.co/mh804w8/pudge-the-fish.gif");
     //Alert message will pop up after feed pudge button
-    setTimeout(function () {
-        alert('TXT MSG- Nani: Time to come home for lunch!');
-    }, 1000);
+    $('#naniMessage').append('Time to come home for lunch!')
+    // setTimeout(function () {
+    //     alert('TXT MSG- Nani: Time to come home for lunch!');
+    // }, 1000);
 
 });
 //Listen for a click on Lunch
@@ -101,11 +105,7 @@ $('.sleepiness').on('click', function () {
 
 
 //sleepScreen
-//Animate images
-
 //Insert "Leave me alone to die" song https://www.youtube.com/watch?v=yb1m04zid8k
-
-
 //Move to mainScreen
 $('.home').on('click', function () {
     //add in decrease level of sleepiness
@@ -115,12 +115,6 @@ $('.home').on('click', function () {
 });
 
 //deathScreen
-//Insert Rick Roll audio https://www.youtube.com/watch?v=V-_O7nl0Ii0
 
 
-//music
-//transfer youtube audio over to mp3
-//download and upload to file on js-tamagotchi
-//if(event.keyCode === 82) {
-  //document.getElementById('lilo').play();
-  //console.log('lilo');  
+
