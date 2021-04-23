@@ -8,7 +8,7 @@ body {
 }
 
 main {
-    background-color: white;
+    background-image: url("https://cdn1.vectorstock.com/i/1000x1000/19/25/pixel-art-game-background-with-blue-sky-and-clouds-vector-27801925.jpg");
     color: burlywood;
     font-family: 'Original Surfer', cursive;
     text-align: center;
@@ -16,7 +16,7 @@ main {
     border-radius: 5px;
     padding: 5px;
     width: 600px;
-    height: 400px;
+    height: 500px;
 
 }
 
@@ -33,11 +33,26 @@ main {
 }
 
 .main-selection {
-    margin-top: 10px;
+    padding-top: 10px;
 }
 
 .lunch-selection {
     margin-top: 10px;
 }
 
+.hidden {
+    display: none;
+}
+
+.lilo-main {
+    margin-top: 20px;
+    /* position: relative;
+    left: 60px;
+    bottom: 65px; */
+}
+
+
+#play {
+    margin-bottom: 50px;
+}
 

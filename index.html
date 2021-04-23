@@ -22,157 +22,167 @@
 
         <ul class="healthmeter">
             <li><label for="hunger">Hunger:</label>
-                <meter id="hunger" min="0" max="10" low="33" high="66" optimum="80" value="10">
+                <meter class="hunger" min="0" max="10" low="33" high="66" optimum="80" value="10">
                     at 10/10
                 </meter>
             </li>
             <li><label for="sleepiness">Sleepiness:</label>
-                <meter id="sleepiness" min="0" max="10" low="33" high="66" optimum="80" value="10">
+                <meter class="sleepiness" min="0" max="10" low="33" high="66" optimum="80" value="10">
                     at 10/10
                 </meter>
             </li>
             <li><label for="happiness">Happiness:</label>
-                <meter id="happiness" min="0" max="10" low="33" high="66" optimum="80" value="10">
+                <meter class="happiness" min="0" max="10" low="33" high="66" optimum="80" value="10">
                     at 10/10
                 </meter>
             </li>
+            <li><label for="age">Age: 1</label></li>
         </ul>
 
         <img class="pixelegg" src="https://i.ibb.co/zZD9GKX/pixel-egg.png" alt="pixelegg" width=200>
 
+
         <form class="form">
-            <input id="name" type="text" placeholder="Enter Name" />
-            <button type="submit">Submit</button>
-            </section>
+            <input id="name" type="text"><input id="submit" type="submit">
+        </form>
+
+        </section>
 
     </main>
 
-    <main id='mainScreen'>
-        <!-- Insert alert message "I have to go feed Pudge after school! Click 'play' to continue!" -->
+    <main id='mainScreen' class='hidden'>
 
         <div class='title'>Main Screen</div>
         <ul class="healthmeter">
             <li><label for="hunger">Hunger:</label>
-                <meter id="hunger" min="0" max="10" low="33" high="66" optimum="80" value="4">
+                <meter class="hunger" min="0" max="10" low="33" high="66" optimum="80" value="4">
                     at 4/10
                 </meter>
             </li>
             <li><label for="sleepiness">Sleepiness:</label>
-                <meter id="sleepiness" min="0" max="10" low="33" high="66" optimum="80" value="5">
+                <meter class="sleepiness" min="0" max="10" low="33" high="66" optimum="80" value="5">
                     at 5/10
                 </meter>
             </li>
             <li><label for="happiness">Happiness:</label>
-                <meter id="happiness" min="0" max="10" low="33" high="66" optimum="80" value="2">
+                <meter class="happiness" min="0" max="10" low="33" high="66" optimum="80" value="2">
                     at 2/10
                 </meter>
             </li>
+            <li><label for="age">Age: 1</label></li>
         </ul>
 
         <img class="lilo-main" src="https://i.ibb.co/NYpd7vk/Main-Screen-Player.png" alt="">
 
         <section class="main-selection">
-            <button class="eat">Eat</button>
-            <button class="sleepiness">Sleep</button>
+            <!-- <button id="eat">Eat</button>
+            <button id="sleepiness">Sleep</button> -->
+            <p id="continueMessage"></p>
             <button class="play">Play</button>
         </section>
     </main>
 
-    <main id='playScreen'>
+    <main id='playScreen' class='hidden'>
 
         <ul class="healthmeter">
             <li><label for="hunger">Hunger:</label>
-                <meter id="hunger" min="0" max="10" low="33" high="66" optimum="80" value="5">
+                <meter class="hunger" min="0" max="10" low="33" high="66" optimum="80" value="5">
                     at 5/10
                 </meter>
             </li>
             <li><label for="sleepiness">Sleepiness:</label>
-                <meter id="sleepiness" min="0" max="10" low="33" high="66" optimum="80" value="7">
+                <meter class="sleepiness" min="0" max="10" low="33" high="66" optimum="80" value="7">
                     at 7/10
                 </meter>
             </li>
             <li><label for="happiness">Happiness:</label>
-                <meter id="happiness" min="0" max="10" low="33" high="66" optimum="80" value="3">
+                <meter class="happiness" min="0" max="10" low="33" high="66" optimum="80" value="3">
                     at 3/10
                 </meter>
             </li>
+            <li><label for="age">Age: 1</label></li>
         </ul>
 
-        <img src="https://i.ibb.co/SfG1DTn/Lilo-swimming-away.gif" alt="lilo-swimming-away" height=200>
+        <img id="lilo-swimming" src="https://i.ibb.co/SfG1DTn/Lilo-swimming-away.gif" alt="lilo-swimming-away"
+            height=200>
 
         <section class="feed-selection">
+            <button class="lunch">Lunch</button>
             <button class="feed-pudge">Feed Pudge</button>
+
         </section>
 
     </main>
 
 
-    <main id='LunchScreen'>
-        <!-- Insert alert message "But I'm not hungry, I need a nap!" -->
+    <main id='lunchScreen' class='hidden'>
+
 
         <ul class="healthmeter">
             <li><label for="hunger">Hunger:</label>
-                <meter id="hunger" min="0" max="10" low="33" high="66" optimum="80" value="5">
+                <meter class="hunger" min="0" max="10" low="33" high="66" optimum="80" value="5">
                     at 5/10
                 </meter>
             </li>
             <li><label for="sleepiness">Sleepiness:</label>
-                <meter id="sleepiness" min="0" max="10" low="33" high="66" optimum="80" value="7">
+                <meter class="sleepiness" min="0" max="10" low="33" high="66" optimum="80" value="7">
                     at 7/10
                 </meter>
             </li>
             <li><label for="happiness">Happiness:</label>
-                <meter id="happiness" min="0" max="10" low="33" high="66" optimum="80" value="3">
+                <meter class="happiness" min="0" max="10" low="33" high="66" optimum="80" value="3">
                     at 3/10
                 </meter>
             </li>
+            <li><label for="age">Age: 1</label></li>
         </ul>
 
         <img src="https://i.ibb.co/p2BGNQr/Lunch-screen-pixel.png" alt="lilo-eating" width=250>
 
         <section class="lunch-selection">
+            <p id="lunchMessage"></p>
             <button class="sleepiness">Sleep</button>
         </section>
     </main>
 
 
-    <main id='sleepScreen'>
-        <!-- Insert alert message "OMG! New level unlocked! Click F-key to continue" -->
+    <main id='sleepScreen' class='hidden'>
 
         <ul class="healthmeter">
             <li><label for="hunger">Hunger:</label>
-                <meter id="hunger" min="0" max="10" low="33" high="66" optimum="80" value="5">
+                <meter class="hunger" min="0" max="10" low="33" high="66" optimum="80" value="5">
                     at 5/10
                 </meter>
             </li>
             <li><label for="sleepiness">Sleepiness:</label>
-                <meter id="sleepiness" min="0" max="10" low="33" high="66" optimum="80" value="7">
+                <meter class="sleepiness" min="0" max="10" low="33" high="66" optimum="80" value="7">
                     at 7/10
                 </meter>
             </li>
             <li><label for="happiness">Happiness:</label>
-                <meter id="happiness" min="0" max="10" low="33" high="66" optimum="80" value="3">
+                <meter class="happiness" min="0" max="10" low="33" high="66" optimum="80" value="3">
                     at 3/10
                 </meter>
             </li>
+            <li><label for="age">Age: 1</label></li>
         </ul>
 
-        <img src="https://i.ibb.co/mc5S82f/Sleep-screen-pixel-1.png" alt="lilo-sleeping">
+        <img src="https://gifmaker.me/PlayFrameAnimation.php?folder=2021042310Rmb1mvKKl3DF4B6yHOxLZf&music=https://www.youtube.com/watch?v=yb1m04zid8k&start=8"
+            alt="lilo-sleeping">
 
         <section></section>
-        <button class="main">Main</button>
+        <button class="home">Main</button>
 
 
     </main>
 
-    <main id='newLevelScreen'>
-        <!-- Insert Rick Roll music -->
-
+    <main id='deathScreen' class='hidden'>
         <img class="waves" src="https://i.ibb.co/PjS9SBh/waves.gif" alt="waves-gif">
 
     </main>
 
-    <!-- <audio src="" controls>
+    <!-- <audio id="lilo" controls hidden>
+        <source src="" type="audio/wav">
     </audio> -->
 
 </body>

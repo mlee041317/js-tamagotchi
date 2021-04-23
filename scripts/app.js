@@ -1,78 +1,126 @@
 //openingScreen
-//When player enters name, an alert will pop up
+//When player enters name, an alert will pop up, console will log name, and openingScreen will disappear when submit is clicked
 const nameInput = document.getElementById('name');
-document.querySelector('form').addEventListener('submit', function (e) {
+document.querySelector('.form').addEventListener('submit', function (e) {
     e.preventDefault();
     alert(`${nameInput.value} is born!`);
+    let $name = $('#name').val();
+    $('#openingScreen').addClass('hidden')
+    $('#mainScreen').removeClass('hidden')
 
-})
-// Listen for a click on submit button when someone clicks
-$('submit').on('click', function () {
-    console.log('the submit button is working!');
-})
+    $('#continueMessage').append(`${nameInput.value} wants to go feed Pudge! Click 'play' to continue`)
 
-//When submit button is clicked, hide openingScreen
-//Move to mainScreen
+});
 
-//mainScreen
-//Message pops up "Let's go feed Pudge! Click 'play' to continue!"
-//Listen for a click on "play" button, and hide mainScreen
-//Move to playScreen
+//When play is clicked, hide playScreen and bring in 
+$('.play').on('click', function () {
+    $('main').addClass('hidden')
+    $('#playScreen').removeClass('hidden')
+
+});
+
+//Create class for lilogotchi that will randomly produce hunger, sleepiness, and happiness levels
+const lilogotchi = {
+    hunger: Math.floor(Math.random() * 10),
+    sleepiness: Math.floor(Math.random() * 10),
+    happiness: Math.floor(Math.random() * 10)
+}
+
+function updateStats() {
+    $('.hunger').attr('value', `${lilogotchi.hunger}`)
+    $('.sleepiness').attr('value', `${lilogotchi.sleepiness}`)
+    $('.happiness').attr('value', `${lilogotchi.happiness}`)
+    $('.age').text(`Age: ${lilogotchi.age}`)
+}
+
+
+
+const timer = setInterval(function () {
+    console.log('tick')
+
+    // lilogotchi.hunger++;
+    // lilogotchi.sleepiness++;
+    // lilogotchi.happiness++;
+
+    updateStats();
+    console.log(lilogotchi)
+
+
+    if (lilogotchi.hunger === 10) {
+        death();
+        clearInterval(timer);
+    }
+    else if (lilogotchi.sleepiness === 10) {
+        death();
+        clearInterval(timer);
+    }
+    else if (lilogotchi.happiness === 10) {
+        death();
+        clearInterval(timer);
+    }
+
+
+}, 10000);
+
+//if lilogotchi dies, deathScreen is going to show up
+function death() {
+    $('main').addClass('hidden')
+    $('#deathScreen').removeClass('hidden')
+    $('#death-message').text('insert message')
+}
 
 //playScreen
-//Listen for a click on "feed pudge" button
-//When clicked, loop in pudge's gif
-//Hide playScreen
-//Move to lunchScreen
+//Listen for a click on "feed pudge" button, when clicked bring in Pudge's gif
+$('.feed-pudge').on('click', function () {
+    $('#lilo-swimming').attr("src", "https://i.ibb.co/mh804w8/pudge-the-fish.gif");
+    //Alert message will pop up after feed pudge button
+    setTimeout(function () {
+        alert('TXT MSG- Nani: Time to come home for lunch!');
+    }, 1000);
+
+});
+//Listen for a click on Lunch
+$('.lunch').on('click', function () {
+    //add in decrease level of hunger
+    $('main').addClass('hidden')
+    $('#lunchScreen').removeClass('hidden')
+
+});
 
 //lunchScreen
-//alert message "But I'm not hungry! I need a nap."
+//add in <p> and .append "But I'm not hungry! I need a nap."
+$('#lunchMessage').append('But I\'m not hungry! I need a nap.')
+
 //Listen for a click on "sleep" button
-//Hide lunchScreen
-//Move to sleepScreen
+$('.sleepiness').on('click', function () {
+    //add in decrease level of sleepiness
+    $('main').addClass('hidden')
+    $('#sleepScreen').removeClass('hidden')
+
+});
+
 
 //sleepScreen
-//Animate images or turn them into gif
-//Insert "Leave me alone to die" song https://www.youtube.com/watch?v=yb1m04zid8k
-//Once audio is done playing, bring alert message "New level unlocked! Click f-key to continue"
-//listen for f-key clicked, once clicked, hide sleepScreen
-//Move to newLevelScreen
+//Animate images
 
-//newLevelScreen
-//Ocean Waves gif
+//Insert "Leave me alone to die" song https://www.youtube.com/watch?v=yb1m04zid8k
+
+
+//Move to mainScreen
+$('.home').on('click', function () {
+    //add in decrease level of sleepiness
+    $('main').addClass('hidden')
+    $('#mainScreen').removeClass('hidden')
+
+});
+
+//deathScreen
 //Insert Rick Roll audio https://www.youtube.com/watch?v=V-_O7nl0Ii0
 
 
-// const lilogotchi = {
-//     hunger: Math.floor(Math.random() * 10),
-//     sleepiness: Math.floor(Math.random() * 10),
-//     happiness: Math.floor(Math.random() * 10)
-// }
-
-// const timer = setInterval(function () {
-//     console.log('tick')
-
-//     lilogotchi.hunger++;
-//     lilogotchi.sleepiness++;
-//     lilogotchi.happiness++;
-
-//     console.log(lilogotchi)
-
-//     if (lilogotchi.hunger === 10) {
-//         const gameOverMessage = '<p>Game Over! Your lilogotchi died!</p>';
-//         $('body').append(gameOverMessage);
-
-//         if (lilogotchi.sleepiness === 10) {
-//             const gameOverMessage = '<p>Game Over! Your lilogotchi died!</p>';
-//             $('body').append(gameOverMessage);
-
-//             if (lilogotchi.happiness === 10) {
-//                 const gameOverMessage = '<p>Game Over! Your lilogotchi died!</p>';
-//                 $('body').append(gameOverMessage);
-
-//                 clearInterval(timer);
-
-//             }
-//         }
-//     }
-// }, 10000);
+//music
+//transfer youtube audio over to mp3
+//download and upload to file on js-tamagotchi
+//if(event.keyCode === 82) {
+  //document.getElementById('lilo').play();
+  //console.log('lilo');  
