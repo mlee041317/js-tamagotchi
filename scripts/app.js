@@ -29,7 +29,7 @@ $('.play').on('click', function () {
 });
 
 //Create a class for the tamagotchi that will store hunger, sleepiness, happiness
-const lilogotchi = {
+const stitchgotchi = {
     hunger: Math.floor(Math.random() * 20),
     sleepiness: Math.floor(Math.random() * 20),
     happiness: Math.floor(Math.random() * 20)
@@ -37,10 +37,10 @@ const lilogotchi = {
 
 //Create a function that will update the meters throughout the game
 function updateStats() {
-    $('.hunger').attr('value', `${lilogotchi.hunger}`)
-    $('.sleepiness').attr('value', `${lilogotchi.sleepiness}`)
-    $('.happiness').attr('value', `${lilogotchi.happiness}`)
-    $('.age').text(`Age: ${lilogotchi.age}`)
+    $('.hunger').attr('value', `${stitchgotchi.hunger}`)
+    $('.sleepiness').attr('value', `${stitchgotchi.sleepiness}`)
+    $('.happiness').attr('value', `${stitchgotchi.happiness}`)
+    $('.age').text(`Age: ${stitchgotchi.age}`)
 }
 
 //Create a variable that will store a function that updates the tamagotchi's health level every 10 seconds
@@ -49,23 +49,23 @@ function updateStats() {
 const timer = setInterval(function () {
     console.log('tick')
 
-    lilogotchi.hunger++;
-    lilogotchi.sleepiness++;
-    lilogotchi.happiness++;
+    stitchgotchi.hunger++;
+    stitchgotchi.sleepiness++;
+    stitchgotchi.happiness++;
 
     updateStats();
-    console.log(lilogotchi)
+    console.log(stitchgotchi)
 
 
-    if (lilogotchi.hunger === 20) {
+    if (stitchgotchi.hunger === 20) {
         death();
         clearInterval(timer);
     }
-    else if (lilogotchi.sleepiness === 20) {
+    else if (stitchgotchi.sleepiness === 20) {
         death();
         clearInterval(timer);
     }
-    else if (lilogotchi.happiness === 20) {
+    else if (stitchgotchi.happiness === 20) {
         death();
         clearInterval(timer);
     }
@@ -76,7 +76,7 @@ const timer = setInterval(function () {
 function death() {
     $('main').addClass('hidden')
     $('#deathScreen').removeClass('hidden')
-    $('#death-message').text('Oh no! Your lilogotchi died!')
+    $('#death-message').text('Oh no! Your stitchgotchi died!')
 
     const audio = new Audio('./imgs/rickroll.mp3')
     audio.play();
@@ -99,7 +99,7 @@ $('.feed-pudge').on('click', function () {
 });
 
 $('.lunch').on('click', function () {
-    updateStats(lilogotchi.hunger--)
+    updateStats(stitchgotchi.hunger--)
     $('main').addClass('hidden')
     $('#lunchScreen').removeClass('hidden')
     const audio = new Audio('./imgs/stitcheating.mp3')
@@ -112,7 +112,7 @@ $('#lunchMessage').append('But I\'m not hungry! I need a nap.')
 
 //Listen for a click on "sleep" button and update the tamagotchi's sleepiness level, and remove class of hidden of sleepScreen
 $('.sleepiness').on('click', function () {
-    updateStats(lilogotchi.sleepiness--)
+    updateStats(stitchgotchi.sleepiness--)
     $('main').addClass('hidden')
     $('#sleepScreen').removeClass('hidden')
 
@@ -121,7 +121,7 @@ $('.sleepiness').on('click', function () {
 });
 
 $('.home').on('click', function () {
-    updateStats(lilogotchi.happiness--)
+    updateStats(stitchgotchi.happiness--)
     $('main').addClass('hidden')
     $('#mainScreen').removeClass('hidden')
 
