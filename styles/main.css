@@ -1,10 +1,14 @@
 body {
-    background-image: url("https://artinsights.com/wp-content/uploads/2017/12/LiloandStitchbackgroundWatercolor-7.png");
+    background-image: url("https://i.pinimg.com/originals/9b/ee/9c/9bee9ccfece6c7750dca6fc3708b5252.gif");
+    /* background-image: url("https://i.pinimg.com/originals/dd/2d/dc/dd2ddc5a9717d9b4aabd7540778b60a1.png"); */
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-color: #464646;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
@@ -18,6 +22,7 @@ main {
     padding: 5px;
     width: 600px;
     height: 550px;
+    margin: 140px;
 
 }
 
@@ -55,7 +60,7 @@ main {
     margin: 10px;
 }
 
-.lilo-main {
+.stitch-main {
     padding: auto;
     max-height: 25vh;
 }
@@ -76,20 +81,29 @@ main {
     margin-top: 20px;
 }
 
-#lilo-swimming {
-    margin: 20px;
+#stitch-bikini {
+    max-height: 25vh;
+    /* margin: 20px; */
+}
+
+.feed-selection {
+    margin: 30px;
 }
 
 #naniMessage {
     font-size: 20px;
 }
 
-.lilo-sass {
-    width: 300px;
+.stitch-eating {
+    max-height: 25vh;
+}
+
+.stitch-sleeping {
+    max-height: 50vh;
 }
 
 .home {
-    margin: 20px;
+    margin: 25px;
 }
 
 .rick {
